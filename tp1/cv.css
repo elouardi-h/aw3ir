@@ -115,3 +115,13 @@ body {
   margin: 8px 0;
   font-size: 14px;
 }
+
+.cv header a {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.cv header a:hover {
+  text-decoration: underline;
+}
