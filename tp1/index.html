@@ -1,41 +1,81 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>TP1</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- Place favicon.ico in the root directory -->
-
-  <style>
-    body {
-      background-color: #e9ebee;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-      font-size: 16px;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  </style>
-
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <!--<link rel="stylesheet" href="style.css">-->
-  <!--<script src="main.js"></script>-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CV — Hamza EL OUARDI</title>
+    <link rel="stylesheet" href="cv.css">
 </head>
-
 <body>
-  <nav>
-    <a href="..">🏠 Index</a> / TP1
-  </nav>
-  <h1>TP 001</h1>
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <img src="../galilee.png" alt="Logo Galilee" />
+<div class="cv">
 
-  <h2><a href="experiences/index.html">Expériences</a></h2>
+    <!-- En-tête / photo -->
+    <header class="top">
+        <!-- Remplacer "photo.jpg" par ta photo -->
+        <img class="photo" src="photo.jpg" alt="Photo de Hamza Elouardi">
+        <div class="top-info">
+            <h1>EL OUARDI</h1>
+            <h2>Hamza</h2>
+            <p class="subtitle">Ingénieur Réseaux & Télécom</p>
+        </div>
+    </header>
+
+    <!-- Informations personnelles -->
+    <h1>Informations personnelles</h1>
+    <table width="100%" border="1">
+        <tr><td>Nom</td><td>EL OUARDI</td></tr>
+        <tr><td>Prénom</td><td>Hamza</td></tr>
+        <tr><td>Naissance</td><td>13/09/1999</td></tr>
+        <tr><td>Ville</td><td>Paris</td></tr>
+    </table>
+
+    <!-- Résumé -->
+    <h1>Résumé</h1>
+    <table width="100%" border="1">
+        <tr>
+            <td colspan="2">
+                Hamza Elouardi, jeune ingénieur en réseaux et télécommunications, possède 2 ans d’expérience chez Orange Maroc en tant qu’ingénieur IT. 
+                Actuellement, il poursuit un Master 2 à l’Université Paris Nord afin d’approfondir ses compétences et de renforcer son expertise dans le domaine des technologies de l’information et des réseaux.
+            </td>
+        </tr>
+    </table>
+
+    <!-- Expériences -->
+    <h1>Expériences</h1>
+    <table width="100%" border="1">
+        <tr>
+            <td style="width:20%;">2023 - 2025</td>
+            <td>
+                <a href="#" target="_blank" rel="noopener">Ingénieur Réseau & Télécom — Orange</a>
+                <!-- Remplacer href="#" par l'URL de l'entreprise si souhaité -->
+            </td>
+        </tr>
+        <tr>
+            <td>Fév — Juin 2023</td>
+            <td>
+                <a href="#" target="_blank" rel="noopener">Stage PFE — Atlas Cloud</a> (domaine : cloud)
+            </td>
+        </tr>
+    </table>
+
+    <!-- Compétences (exemple) -->
+    <h1>Compétences</h1>
+    <table width="100%" border="1">
+        <tr><td>Réseaux</td><td>Routage, commutation, supervision</td></tr>
+        <tr><td>Cloud</td><td>Virtualisation, services Cloud (PFE)</td></tr>
+        <tr><td>Outils</td><td>Linux, Wireshark, outils de supervision</td></tr>
+    </table>
+
+    <!-- Contact -->
+    <h1>Contact</h1>
+    <table width="100%" border="1">
+        <tr><td>Téléphone</td><td><a href="tel:751529126">751529126</a></td></tr>
+        <tr><td>Email</td><td><a href="mailto:ton.email@example.com">ton.email@example.com</a> <!-- Remplace par ton email réel --></td></tr>
+    </table>
+
+    <footer class="note">
+        <p>Remplace les liens <code>#</code> par les URLs réelles (site Orange / Atlas Cloud / formations). Je peux créer les pages `formations.html` et `experiences.html` si tu veux.</p>
+    </footer>
+</div>
 </body>
-
 </html>
