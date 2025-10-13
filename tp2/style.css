@@ -1,0 +1,87 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  background: #7895c1;
+  padding: 24px;
+  color: #111;
+}
+
+form {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 1px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
+  max-width: 640px;
+}
+
+label {
+  width: 150px;
+  display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  width: 250px;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+small.info {
+  display: block;
+  color: #666;
+  font-size: 0.85rem;
+  margin-left: 150px;
+}
+
+/* bouton */
+.btn-primary {
+  border-radius: 5px;
+  padding: 6px 12px;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #0d6efd;
+}
+
+/* champ invalide */
+input:invalid {
+  border-color: #d9534f;
+}
+
+/* champ valide */
+input:valid {
+  border-color: #28a745;
+}
+
+/* emoji vert ✔ si champ valide */
+input:valid + .icon-ok {
+  display: inline-block;
+  color: #28a745;
+  margin-left: 8px;
+}
+
+/* cacher emoji si champ invalide */
+input:invalid + .icon-ok {
+  display: none;
+}
+
+/* bouton submit grisé si formulaire invalide */
+form:invalid input[type="submit"] {
+  background-color: gray;
+  border-color: gray;
+  cursor: not-allowed;
+}
+
+/* responsive */
+@media (max-width: 520px) {
+  label, input, small.info {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}

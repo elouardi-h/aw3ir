@@ -1,40 +1,58 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="fr">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>TP2</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <!-- Place favicon.ico in the root directory -->
-
-  <style>
-    body {
-      background-color: #e9ebee;
-      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco",
-        "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-      font-size: 16px;
-      margin: 0 auto;
-      max-width: 800px;
-    }
-  </style>
-
-  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-  <!--<link rel="stylesheet" href="style.css">-->
-  <!--<script src="js/main.js"></script>-->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TP2 — Formulaire</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <nav>
-    <a href="..">🏠 Index</a> / TP2
-  </nav>
-  <h1>tp2</h1>
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <img src="../galilee.png" alt="Logo Galilee" />
-</body>
+  <h1>Formulaire</h1>
 
+  <form action="action.html" method="get">
+    <!-- Nom -->
+    <p>
+      <label for="name">Nom</label>
+      <input id="name" name="name" type="text" minlength="2" maxlength="20" required />
+      <span class="icon-ok">✔</span>
+      <small class="info">2 à 20 caractères</small>
+    </p>
+
+    <!-- Prénom -->
+    <p>
+      <label for="firstname">Prénom</label>
+      <input id="firstname" name="firstname" type="text" minlength="2" maxlength="20" required />
+      <span class="icon-ok">✔</span>
+      <small class="info">2 à 20 caractères</small>
+    </p>
+
+    <!-- Date de naissance -->
+    <p>
+      <label for="birthday">Date de naissance</label>
+      <input id="birthday" name="birthday" type="date" required />
+      <span class="icon-ok">✔</span>
+      <small class="info">Veuillez saisir votre date de naissance</small>
+    </p>
+
+    <!-- Adresse -->
+    <p>
+      <label for="address">Adresse postale</label>
+      <input id="address" name="address" type="text" minlength="5" maxlength="50" required />
+      <span class="icon-ok">✔</span>
+      <small class="info">5 à 50 caractères</small>
+    </p>
+
+    <!-- Email -->
+    <p>
+      <label for="email">Adresse mail</label>
+      <input id="email" name="email" type="email" minlength="5" maxlength="30" required />
+      <span class="icon-ok">✔</span>
+      <small class="info">Format : exemple@domaine.com (5 à 30 caractères)</small>
+    </p>
+
+    <p>
+      <input type="submit" class="btn-primary" value="Envoyer" />
+    </p>
+  </form>
+</body>
 </html>
