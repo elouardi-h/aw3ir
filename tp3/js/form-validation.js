@@ -1,6 +1,3 @@
-console.log("DOM ready!");
-
-// Vérification email
 function validateEmail(email) {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -9,7 +6,7 @@ function validateEmail(email) {
 
 window.onload = function () {
 
-  // Bloquer date future sur input
+  
   const birthdayInput = document.getElementById("birthday");
   birthdayInput.max = new Date().toISOString().split("T")[0];
 
@@ -27,13 +24,13 @@ window.onload = function () {
     let isValid = true;
     let errorMsg = "";
 
-    // champs obligatoires
+    
     if (!lastname || !firstname || !birthday || !address || !email) {
       isValid = false;
       errorMsg += "Tous les champs sont obligatoires.\n";
     }
 
-    // min length
+   
     function checkLength(field, name) {
       if (field && field.length < 5) {
         isValid = false;
@@ -45,13 +42,13 @@ window.onload = function () {
     checkLength(firstname, "Prénom");
     checkLength(address, "Adresse");
 
-    // email
+   
     if (email && !validateEmail(email)) {
       isValid = false;
       errorMsg += "Email invalide.\n";
     }
 
-    // date
+   
     if (birthday) {
       const d = new Date(birthday);
       const dateVal = d.getTime();
@@ -66,7 +63,7 @@ window.onload = function () {
       }
     }
 
-    // ERREURS → popup
+    
     if (!isValid) {
       const title = document.querySelector(".modal-title");
       title.textContent = "Erreur dans le formulaire";
@@ -79,18 +76,18 @@ window.onload = function () {
       return;
     }
 
-    // OK → afficher MAP
+    
     showGoogleMap(address);
   });
 };
 
 
-// Afficher Google Maps selon l'adresse saisie
+
 function showGoogleMap(address) {
 
   const title = document.querySelector(".modal-title");
   title.textContent = "Localisation (Google Maps)";
-  title.style.color = "#0d6efd";  // ✅ bleu normal
+  title.style.color = "#0d6efd";  
 
   const encoded = encodeURIComponent(address);
 
