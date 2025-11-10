@@ -1,39 +1,114 @@
-<!doctype html>
-<html>
-
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>TP4</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <title>TP4 - Ajouter un contact</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css" />
 
-    <style>
-        body {
-            background-color: #e9ebee;
-            font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-            font-size: 16px;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-    </style>
-
-    <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-    <!--<link rel="stylesheet" href="style.css">-->
-    <!--<script src="main.js"></script>-->
+  <style>
+    body {
+      background: #f5f7fa;
+    }
+    h1 {
+      margin: 20px 0;
+      text-align: center;
+      font-weight: 600;
+      color: #0d6efd;
+    }
+    [data-count] {
+      font-size: 13px;
+      color: #666;
+    }
+    #map iframe {
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+  </style>
 </head>
 
 <body>
-    <nav>
-        <a href="..">🏠 Index</a> / TP4
-    </nav>
-    <h1>TP4</h1>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-    <img src="../galilee.png" alt="Logo Galilee" />
-</body>
 
+<div class="container mt-4">
+
+    <h1>Ajouter un contact</h1>
+
+    <!-- FORMULAIRE -->
+    <form id="myForm">
+
+        <!-- NOM -->
+        <div class="mb-3">
+          <label for="name" class="form-label">Nom</label>
+          <input type="text" id="name" class="form-control" onkeyup="calcNbChar(this.id)">
+          <div data-count>0 car.</div>
+        </div>
+
+        <!-- PRENOM -->
+        <div class="mb-3">
+          <label for="firstname" class="form-label">Prénom</label>
+          <input type="text" id="firstname" class="form-control" onkeyup="calcNbChar(this.id)">
+          <div data-count>0 car.</div>
+        </div>
+
+        <!-- DATE -->
+        <div class="mb-3">
+          <label for="birth" class="form-label">Date de naissance</label>
+          <input type="date" id="birth" class="form-control">
+        </div>
+
+        <!-- ADRESSE + GPS -->
+        <div class="mb-3">
+          <label for="adresse" class="form-label">Adresse</label>
+          <div class="d-flex gap-2">
+            <input type="text" id="adresse" class="form-control" onkeyup="calcNbChar(this.id)">
+            <button id="gps" class="btn btn-warning">📍 GPS</button>
+          </div>
+          <div data-count>0 car.</div>
+        </div>
+
+        <!-- MAP -->
+        <div id="map" class="mb-4"></div>
+
+        <!-- EMAIL -->
+        <div class="mb-3">
+          <label for="mail" class="form-label">Mail</label>
+          <input type="email" id="mail" class="form-control" onkeyup="calcNbChar(this.id)">
+          <div data-count>0 car.</div>
+        </div>
+
+        <!-- BOUTONS -->
+        <div class="d-flex gap-3">
+          <button type="submit" class="btn btn-primary">Ajouter</button>
+          <button id="reset" class="btn btn-danger">Reset</button>
+        </div>
+
+    </form>
+
+
+    <!-- LISTE CONTACTS -->
+    <h3 class="mt-5">Liste des contacts (<span id="nb"></span>)</h3>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Date de naissance</th>
+          <th>Adresse</th>
+          <th>Mail</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/gps.js"></script>
+<script src="js/store.js"></script>
+<script src="js/form-validation.js"></script>
+
+</body>
 </html>
